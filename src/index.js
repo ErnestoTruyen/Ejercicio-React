@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const container = document.getElementById('app');
+import Badge from './components/Badge'
 
-const element = <h1>Hello, Platzi Badgees</h1>;
-ReactDOM.render(element, container);
+const container = document.getElementById('app');
+ReactDOM.render(<Badge />,container);

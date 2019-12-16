@@ -1,14 +1,16 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Header from '../components/Header'
-import confLogo from '../images/badge-header.svg';
+import Header from '../components/Header';
+import Section from '../components/Section';
+
 
 class BadgeNew extends React.Component{
     render(){
         return (
             <div>
-                <Navbar logo={confLogo} />
+                <Navbar />
                 <Header />
+                <Section />
             </div>
         );
     }

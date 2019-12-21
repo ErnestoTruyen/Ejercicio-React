@@ -1,8 +1,8 @@
 import React from 'react';
 import headerLogo from '../images/platziconf-logo.svg'; 
-import './styles/Header.css';
+import './styles/HeaderNewBadge.css';
 
-class Header extends React.Component {
+class HeaderNewBadge extends React.Component {
     render(){
         return (
             <div className="Header__hero">
@@ -12,4 +12,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default HeaderNewBadge;

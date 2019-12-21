@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Header from '../components/Header';
+import HeaderNewBadge from '../components/HeaderNewBadge';
 import Section from '../components/Section';
 
 
@@ -9,7 +9,7 @@ class BadgeNew extends React.Component{
         return (
             <div>
                 <Navbar />
-                <Header />
+                <HeaderNewBadge />
                 <Section />
             </div>
         );

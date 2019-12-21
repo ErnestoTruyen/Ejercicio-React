@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Header from '../components/Header'
+import Section from '../components/Section'
 
 
 class Badges extends React.Component {
@@ -7,7 +9,8 @@ class Badges extends React.Component {
         return (
             <div>
                 <Navbar />
-                
+                <Header />
+                <Section/>
             </div>
         );
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import HeaderNewBadge from '../components/HeaderNewBadge';
-import Section from '../components/Section';
+import SectionNewBadge from '../components/SectionNewBadge';
 
 
 class BadgeNew extends React.Component{
@@ -10,7 +10,7 @@ class BadgeNew extends React.Component{
             <div>
                 <Navbar />
                 <HeaderNewBadge />
-                <Section />
+                <SectionNewBadge />
             </div>
         );
     }

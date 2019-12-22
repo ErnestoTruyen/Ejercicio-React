@@ -2,14 +2,6 @@ import React from 'react';
 
 class BadgeForm extends React.Component {
 
-    // state = {};
-
-    // handleChange = (e) => {
-    //     this.setState({
-    //         [e.target.name]: e.target.value
-    //     });
-    // }
-
     handleClick = (e) => {
         console.log('hizo click en el boton');
     }
@@ -21,7 +13,7 @@ class BadgeForm extends React.Component {
 
     render(){
         return (
-            <div>
+            <React.Fragment>
                 <h1>New Attendant</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
@@ -79,7 +71,7 @@ class BadgeForm extends React.Component {
                         className="btn btn-primary">Save
                     </button>
                 </form>
-            </div>
+            </React.Fragment>
         );
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import BadgesList from './BadgesList';
+import { Link } from 'react-router-dom';
 
 class Section extends React.Component {
 
@@ -39,10 +40,10 @@ class Section extends React.Component {
         return (
             <div className="Badges__container">
                 <div className="Badges__buttons">
-                    <a href="/badges/new" 
+                    <Link to="/badges/new" 
                        className="btn btn-primary" >
                            New Badge
-                    </a>
+                    </Link>
                 </div>
                 <BadgesList badges={this.state.data} />
             </div>

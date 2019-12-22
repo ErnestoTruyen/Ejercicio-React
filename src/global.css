@@ -7,9 +7,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html{
+  height: 100%;
+}
+
 body {
   font-family: 'Lato', 'Helvetica Neue', sans-serif;
   background-color: #F4F4F7;
+  height: 100%;
 }
 
 h1 {
@@ -71,4 +76,8 @@ a.link-unstyled:hover {
 
 .btn.btn-danger:not(:disabled):not(.disabled):focus {
   box-shadow: 0000.2remrgba(255, 64, 64, 0.5);
+}
+
+#app{
+  height: 100%;
 }

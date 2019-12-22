@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 import Header from '../components/Header'
 import Section from '../components/Section'
 
@@ -7,11 +6,10 @@ import Section from '../components/Section'
 class Badges extends React.Component {
     render(){
         return (
-            <div>
-                <Navbar />
+            <React.Fragment>
                 <Header />
                 <Section/>
-            </div>
+            </React.Fragment>
         );
     }
 }

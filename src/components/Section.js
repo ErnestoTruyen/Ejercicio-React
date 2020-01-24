@@ -14,26 +14,20 @@ class Section extends React.Component {
     }
 
     componentDidMount(){
-        console.log('entro a componentDidMount');
         this.fetchData();
     }
 
     fetchData = async () => {
-        console.log('entro a fetchData');
         this.setState({loading: true, error: null});
-        console.log('entro a fetchData 2');
         try {
             const data = await api.badges.list();
-            console.log('entro al try antes');
             this.setState({loading: false, data: data});
-            console.log('entro al try despues');
         } catch (error) {
             this.setState({loading: false, error: error});
         }
     }
 
     render(){
-        console.log('entro a render');
         if(this.state.loading === true){
             return <PageLoading />;
         }

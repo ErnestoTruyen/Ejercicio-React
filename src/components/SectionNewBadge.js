@@ -2,19 +2,23 @@ import React from 'react';
 import Badge from './Badge';
 import BadgeForm from './BadgeForm';
 import api from '../pages/api';
+import md5 from 'md5';
+import PageLoading from './PageLoading';
 
 // const avatarURL = "https://s.gravatar.com/avatar/48ed450623c299f8c135f614a819aefb?s=80";
 
 class SectionNewBadge extends React.Component{
 
     state = {
+        loading : false,
+        error: null,
         form : {
             firstName:'',
             lastName:'',
             email:'',
             jobTitle:'',
             linkedin: '',
-            avatarUrl: ''
+            avatarUrl: 'https://www.gravatar.com/avatar/?d=identicon'
         }
     };
     componentDidMount(){
@@ -22,14 +26,29 @@ class SectionNewBadge extends React.Component{
     }
 
     handleChange = e => {
-        this.setState(
-            {
-                form: {
-                    ...this.state.form,
-                    [e.target.name]: e.target.value
+        console.log('evento: ',e.target.name);
+        if(e.target.name === 'email'){
+            const email = e.target.value;
+            const hash = md5(email);
+            this.setState(
+                {
+                    form: {
+                        ...this.state.form,
+                        [e.target.name]: e.target.value,
+                        avatarUrl: `https://www.gravatar.com/avatar/${hash}?d=identicon`
+                    }
                 }
-            }
-        );
+            );
+        }else{
+            this.setState(
+                {
+                    form: {
+                        ...this.state.form,
+                        [e.target.name]: e.target.value
+                    }
+                }
+            );
+        }
     }
 
     handleSubmit = async e => {
@@ -45,6 +64,13 @@ class SectionNewBadge extends React.Component{
     }
     
     render(){
+        if(this.state.loading){
+            return (
+                <React.Fragment>
+                    <PageLoading />
+                </React.Fragment>
+            );
+        }
         return (
             <div className="container">
                 <div className="row">
@@ -60,6 +86,8 @@ class SectionNewBadge extends React.Component{
                                 {this.state.form.jobTitle || 'JOB_TITLE'} 
                             linkedin=
                                 {this.state.form.linkedin || 'LINKEDIN'}
+                            avatarUrl=
+                                {this.state.form.avatarUrl || ''}
                         />
                     </div>
                     <div className="col-6">

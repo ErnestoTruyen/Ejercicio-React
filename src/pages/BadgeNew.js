@@ -8,7 +8,7 @@ class BadgeNew extends React.Component{
         return (
             <React.Fragment>
                 <HeaderNewBadge />
-                <SectionNewBadge />
+                <SectionNewBadge history={this.props.history} />
             </React.Fragment>
         );
     }

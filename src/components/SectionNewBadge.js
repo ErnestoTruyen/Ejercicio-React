@@ -3,6 +3,7 @@ import Badge from './Badge';
 import BadgeForm from './BadgeForm';
 import api from '../pages/api';
 import md5 from 'md5';
+import { browserHistory } from 'react-router';
 import PageLoading from './PageLoading';
 
 // const avatarURL = "https://s.gravatar.com/avatar/48ed450623c299f8c135f614a819aefb?s=80";

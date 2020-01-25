@@ -58,6 +58,8 @@ class SectionNewBadge extends React.Component{
         try {
             await api.badges.create(this.state.form);
             this.setState({loading: false});
+
+            this.props.history.push('/badges');
         } catch (error) {
             this.setState({loading: false, error: error});
         }
@@ -95,6 +97,7 @@ class SectionNewBadge extends React.Component{
                             onChange={this.handleChange}
                             onSubmit={this.handleSubmit}
                             formValues={this.state.form}
+                            error={this.state.error}
                         />
                     </div>
                 </div>
